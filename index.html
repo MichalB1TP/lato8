@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantyczny Układ 8</title>
+    <style>
+        body {
+            margin: 0 auto; 
+            padding: 0;
+            width: 600px;
+            height: 800px; 
+            box-sizing: border-box; 
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header, main, footer {
+            border: 1px solid black; 
+            width: 600px;
+            text-align: center;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            height: 100px; 
+            padding: 15px 5px;
+        }
+        
+        header {
+            border-bottom: 1px solid black;
+        }
+        footer {
+            border-top: 1px solid black;
+        }
+        
+        main {
+            height: 600px; 
+            display: flex; 
+            flex-direction: row; 
+            border-top: none; 
+            border-bottom: none;
+        }
+
+        nav {
+            width: 30%; 
+            height: 100%; 
+            display: flex;
+            flex-direction: column; 
+            border-right: 1px solid black;
+        }
+
+        article {
+            width: 70%; 
+            height: 100%; 
+            display: flex;
+            flex-direction: column; 
+            border-right: 1px solid black;
+        }
+        
+        nav h4, article h4 {
+            height: 10%; 
+            border-bottom: 1px solid black;
+            padding: 10px 5px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        aside, main article section {
+            height: 30%; 
+            padding: 10px 5px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+        
+        h1, h3, h4, p {
+            margin: 5px 0;
+            font-weight: normal; 
+            font-size: 16px; 
+        }
+
+    </style>
+</head>
+<body>
+    <B><P>INF.03-08-25.06-SG</P></B>
+
+
+    <header>
+        <h1>Blok nagłówkowy</h1>
+    </header>
+
+    <main>
+        
+        <nav>
+            <h4>Blok nawigacyjny</h4>
+            <aside>
+                <p>Blok 1</p>
+            </aside>
+            <aside>
+                <p>Blok 2</p>
+            </aside>
+            <aside class="ostatni">
+                <p>Blok 3</p>
+            </aside>
+        </nav>
+
+        <article>
+            <h4>Blok główny</h4>
+            <section>
+                <p>Sekcja 1</p>
+            </section>
+            <section>
+                <p>Sekcja 2</p>
+            </section>
+            <section class="ostatni">
+                <p>Sekcja 3</p>
+            </section>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Blok stopki</p>
+    </footer>
+
+</body>
+</html>
